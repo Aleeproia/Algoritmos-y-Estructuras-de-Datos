@@ -26,16 +26,15 @@ public class ProfundidadDeArbolBinario {
                     cola.encolar(arbol.getHijoIzquierdo());
                 }
                 if (!arbol.tieneHijoDerecho()) {
-                    continue;
+                    cola.encolar(arbol.getHijoDerecho());
                 }
-                cola.encolar(arbol.getHijoDerecho());
             }
             else {
-                if (cola.esVacia()) {
-                    continue;
+                if (!cola.esVacia()) {
+               		++nivel;
+                	cola.encolar(null);
                 }
-                ++nivel;
-                cola.encolar(null);
+
             }
         }
         return suma;
