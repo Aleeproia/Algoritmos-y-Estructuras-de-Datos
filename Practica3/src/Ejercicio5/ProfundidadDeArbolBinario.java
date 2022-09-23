@@ -25,7 +25,7 @@ public class ProfundidadDeArbolBinario {
                 if (arbol.tieneHijoIzquierdo()) {
                     cola.encolar(arbol.getHijoIzquierdo());
                 }
-                if (!arbol.tieneHijoDerecho()) {
+                if (arbol.tieneHijoDerecho()) {
                     cola.encolar(arbol.getHijoDerecho());
                 }
             }
